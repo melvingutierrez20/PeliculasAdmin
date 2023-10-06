@@ -51,6 +51,7 @@
                     app:layout_constraintStart_toStartOf="parent"
 
                     app:shapeAppearanceOverlay="@style/roundedImageView" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
