@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/color"
+    tools:context=".Registro">
+
+    <LinearLayout
+        android:layout_width="400dp"
+        android:layout_height="700dp"
+        android:background="@drawable/fondo"/>
+
+    <ImageView
+        android:layout_width="120sp"
+        android:layout_height="120sp"
+        android:id="@+id/iconUser"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/user"
+        android:layout_marginVertical="40dp"/>
+
+
+    <LinearLayout
+        android:id="@+id/message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iconUser"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aladin"
+            android:gravity="center"
+            android:text="Bienvenido"
+            android:textColor="@color/black"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Registrarse de usuario"
+            android:textStyle="bold"
+            android:textSize="32sp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:fontFamily="@font/aladin"
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/formLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/message"
+        android:layout_marginVertical="30dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/txtEmail"
+            android:layout_width="300dp"
+            android:layout_marginStart="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border"
+            android:fontFamily="@font/aladin"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:padding="16dp"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/txtPassword"
+            android:layout_width="300dp"
+            android:layout_marginStart="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border"
+            android:fontFamily="@font/aladin"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:padding="16dp"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/txtConfirmPassword"
+            android:layout_width="300dp"
+            android:layout_marginStart="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border"
+            android:fontFamily="@font/aladin"
+            android:hint="Confirmar contraseña"
+            android:inputType="textPassword"
+            android:padding="16dp"
+            android:textSize="20sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCreateAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="64dp"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="@color/Color4"
+            android:fontFamily="@font/aladin"
+            android:text="Crear cuenta"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:visibility="gone"
+
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/formLogin"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ya tiene cuenta."/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:id="@+id/txtLoginBtn"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+</RelativeLayout>

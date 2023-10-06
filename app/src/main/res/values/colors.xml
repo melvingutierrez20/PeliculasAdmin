@@ -2,13 +2,4 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="cielo">#B7BD6</color>
-    <color name="color1">#B7DBD6</color>
-    <color name="color2">#7CC0CF</color>
-    <color name="color3">#90D1C8</color>
-    <color name="color4">#688A83</color>
-    <color name="color5">#243531</color>
-    <color name="color6">#7FBBB2</color>
-    <color name="color7">#E2F2EF</color>
-    <color name="color8">#ad666a</color>
 </resources>
