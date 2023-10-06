@@ -15,7 +15,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:shapeAppearanceOverlay="@style/rounder_image"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:src="@drawable/agregar" />
 
     <TextView
         android:id="@+id/tituloxtx"
@@ -39,7 +39,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:src="@tools:sample/avatars"
+        android:src="@drawable/agregar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/tituloxtx"
         app:layout_constraintTop_toBottomOf="@+id/tituloxtx"
