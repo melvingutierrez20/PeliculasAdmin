@@ -6,4 +6,8 @@
     </style>
 
     <style name="Theme.AppMovie" parent="Base.Theme.AppMovie" />
+    <style name="rounder_image">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">10sp</item>
+    </style>
 </resources>
