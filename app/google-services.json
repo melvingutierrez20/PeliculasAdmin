@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "497772010891",
+    "project_id": "pelis-parcial",
+    "storage_bucket": "pelis-parcial.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:497772010891:android:abef8955708c5f5882238e",
+        "android_client_info": {
+          "package_name": "com.example.app_pelis"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtjNS5ehNl8mPTICbTTxOxa7SxzlaVxxY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

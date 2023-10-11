@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MunuPrincipal">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            app:cardBackgroundColor="@color/Color1"
+            app:cardUseCompatPadding="true"
+            android:padding="0.2dp"
+            app:cardCornerRadius="5dp">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/BienvenidoP"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"/>
+
+                <ProgressBar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ProgresBar"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/NombreP"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/NombreP"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:id="@+id/CorreoP"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/CorreoP"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="180dp"
+                android:layout_height="220dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/Color3">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    app:lottie_imageAssetsFolder="assets"
+                    app:lottie_fileName="movie.json"
+                    app:lottie_loop="true"
+                    app:lottie_autoPlay="true"
+                    android:layout_gravity="center"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:text="@string/Agregar_Peli"
+                    android:textStyle="bold"
+                    android:id="@+id/AgregarPeli"/>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/CerrarC"
+            android:id="@+id/CerrarC"/>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</ScrollView>
