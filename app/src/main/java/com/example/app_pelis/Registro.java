@@ -14,6 +14,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.app_pelis.Menu.InicioActivity;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
@@ -132,7 +133,7 @@ public class Registro extends AppCompatActivity {
             public void onSuccess(Void unused) {
                 progressDialog.dismiss();
                 Toast.makeText(Registro.this, "Cuenta creada con Exito", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(Registro.this, MunuPrincipal.class));
+                startActivity(new Intent(Registro.this, InicioActivity.class));
                 finish();
             }
         }).addOnFailureListener(new OnFailureListener() {

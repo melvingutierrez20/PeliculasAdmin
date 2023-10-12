@@ -14,6 +14,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.app_pelis.Menu.InicioActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
@@ -86,7 +87,7 @@ public class Login extends AppCompatActivity {
                 if (task.isSuccessful()){
                     progressDialog.dismiss();
                     FirebaseUser user = firebaseAuth.getCurrentUser();
-                    startActivity(new Intent(Login.this, MunuPrincipal.class));
+                    startActivity(new Intent(Login.this, InicioActivity.class));
                     Toast.makeText(Login.this, "Bienvenido(a)" + user.getEmail(),Toast.LENGTH_SHORT).show();
                     finish();
                 }
