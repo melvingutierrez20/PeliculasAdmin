@@ -7,11 +7,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.ViewFlipper;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -30,7 +28,6 @@ public class MunuPrincipal extends AppCompatActivity {
     TextView NombreP, CorreoP;
     ProgressBar ProgresBar;
     DatabaseReference Usuarios;
-    ViewFlipper viewFlipper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,26 +56,7 @@ public class MunuPrincipal extends AppCompatActivity {
                 startActivity(new Intent(MunuPrincipal.this, AgregarPelicula.class));
             }
         });
-
-        int imagenes[] = {R.drawable.estreno1, R.drawable.estreno2, R.drawable.estreno3, R.drawable.estreno4};
-        viewFlipper = findViewById(R.id.carrusel);
-
-        for (int image: imagenes){
-            imagenesCarrusel(image);
-        }
     }
-    public void imagenesCarrusel(int image){
-        ImageView imagenView = new ImageView(this);
-        imagenView.setBackgroundResource(image);
-
-        viewFlipper.addView(imagenView);
-        viewFlipper.setFlipInterval(4000);
-        viewFlipper.setAutoStart(true);
-
-        viewFlipper.setInAnimation(this, android.R.anim.slide_out_right);
-        viewFlipper.setInAnimation(this, android.R.anim.slide_in_left);
-    }
-
     @Override
     protected void onStart() {
         ComprobarInicioSesion();
