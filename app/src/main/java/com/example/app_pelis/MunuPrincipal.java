@@ -7,11 +7,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.ViewFlipper;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -23,14 +21,13 @@ import com.google.firebase.database.ValueEventListener;
 
 public class MunuPrincipal extends AppCompatActivity {
 
-    Button CerrarC, AgregarPeli;
+    Button CerrarC, AgregarPeli, Lista;
     FirebaseAuth firebaseAuth;
     FirebaseUser user;
 
     TextView NombreP, CorreoP;
     ProgressBar ProgresBar;
     DatabaseReference Usuarios;
-    ViewFlipper viewFlipper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +36,7 @@ public class MunuPrincipal extends AppCompatActivity {
 
         NombreP = findViewById(R.id.NombreP);
         AgregarPeli = findViewById(R.id.AgregarPeli);
+        Lista = findViewById(R.id.Lista);
         CorreoP = findViewById(R.id.CorreoP);
         ProgresBar = findViewById(R.id.ProgresBar);
         CerrarC = findViewById(R.id.CerrarC);
@@ -59,26 +57,13 @@ public class MunuPrincipal extends AppCompatActivity {
                 startActivity(new Intent(MunuPrincipal.this, AgregarPelicula.class));
             }
         });
-
-        int imagenes[] = {R.drawable.estreno1, R.drawable.estreno2, R.drawable.estreno3, R.drawable.estreno4};
-        viewFlipper = findViewById(R.id.carrusel);
-
-        for (int image: imagenes){
-            imagenesCarrusel(image);
-        }
+        Lista.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MunuPrincipal.this, vista_peli.class));
+            }
+        });
     }
-    public void imagenesCarrusel(int image){
-        ImageView imagenView = new ImageView(this);
-        imagenView.setBackgroundResource(image);
-
-        viewFlipper.addView(imagenView);
-        viewFlipper.setFlipInterval(4000);
-        viewFlipper.setAutoStart(true);
-
-        viewFlipper.setInAnimation(this, android.R.anim.slide_out_right);
-        viewFlipper.setInAnimation(this, android.R.anim.slide_in_left);
-    }
-
     @Override
     protected void onStart() {
         ComprobarInicioSesion();

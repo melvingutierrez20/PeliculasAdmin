@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
-import com.example.app_pelis.Menu.InicioActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -38,7 +37,7 @@ public class Pantalla_Carga extends AppCompatActivity {
             startActivity(new Intent(Pantalla_Carga.this, MainActivity.class));
             finish();
         }else {
-            startActivity(new Intent(Pantalla_Carga.this, InicioActivity.class));
+            startActivity(new Intent(Pantalla_Carga.this, MunuPrincipal.class));
             finish();
         }
     }
